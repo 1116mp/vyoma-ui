@@ -2,7 +2,7 @@
 
 import * as THREE from "three";
 import { useRef, useEffect } from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile"; // Assumes the corrected hook is here
 
 export default function ShinyParticleGalaxy() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -74,13 +74,11 @@ export default function ShinyParticleGalaxy() {
     function animate() {
       animationId = requestAnimationFrame(animate);
 
-      // Rotate each layer at slightly different speeds
       particleGroups.forEach((group, i) => {
         group.rotation.y += 0.0005 + i * 0.0002;
         group.rotation.x += 0.0003 + i * 0.0001;
       });
 
-      // Move camera based on cursor
       camera.position.x += (targetX - camera.position.x) * 0.05;
       camera.position.y += (-targetY - camera.position.y) * 0.05;
       camera.lookAt(scene.position);
