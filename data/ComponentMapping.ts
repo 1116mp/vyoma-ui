@@ -29,6 +29,7 @@ import {
 import { BentoGridShowcase, BentoGridTheme } from "@/components/vui/BentoGrid";
 import CardShowcase, { CardTheme } from "@/components/vui/Card";
 import TunnelShowcase from "@/components/vui/backgrounds/Tunnel";
+import SpaceShowcase from "@/components/vui/backgrounds/Space";
 import {
   WavyTilesShowcase,
   WavyTilesTheme,
@@ -127,6 +128,14 @@ export const componentMap: ComponentCategoryMap = {
       path: "components/vui/backgrounds/Tunnel.tsx",
       description:
         "🌌 <b>3D Tunnel Animation</b> - Mesmerizing <span style='color: #8b5cf6;'>depth-based</span> background effect with <span style='color: #3b82f6;'>particle systems</span> and <span style='color: #10b981;'>smooth transitions</span>. <i>Creates an immersive visual experience for hero sections.</i>",
+    },
+    {
+      name: "Space",
+      component: SpaceShowcase,
+      route: "/backgrounds/space",
+      path: "components/vui/backgrounds/Space.tsx",
+      description:
+        "🌌 <b>3D Space Animation</b> - Mesmerizing <span style='color: #8b5cf6;'>depth-based</span> background effect with <span style='color: #3b82f6;'>particle systems</span> and <span style='color: #10b981;'>smooth transitions</span>. <i>Creates an immersive visual experience for hero sections.</i>",
     },
     {
       name: "Drawing Lines",
