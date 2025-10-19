@@ -23,8 +23,7 @@ export default function Space({
 
     // Hardcoded values
     const backgroundColor = "transparent";
-    const enableControls = true;
-    const className = ""; 
+    const enableControls = true; 
     //scene setup
     const scene = new THREE.Scene();
     if (backgroundColor !== "transparent") {
@@ -177,7 +176,8 @@ export default function Space({
 
     //handle resizing
     function onWindowResize() {
-      if (!containerRef.current) return;
+      const container = containerRef.current;
+      if (!container) return;
       camera.aspect = container.clientWidth / container.clientHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(container.clientWidth, container.clientHeight);
