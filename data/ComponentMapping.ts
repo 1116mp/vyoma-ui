@@ -135,7 +135,7 @@ export const componentMap: ComponentCategoryMap = {
       route: "/backgrounds/space",
       path: "components/vui/backgrounds/Space.tsx",
       description:
-        "🌌 <b>3D Space Animation</b> - Mesmerizing <span style='color: #8b5cf6;'>depth-based</span> background effect with <span style='color: #3b82f6;'>particle systems</span> and <span style='color: #10b981;'>smooth transitions</span>. <i>Creates an immersive visual experience for hero sections.</i>",
+        "🧑‍🚀 <b>Interactive 3D Space Scene</b> - Embark on a cosmic journey with a <span style='color: #3b82f6;'>fully interactive</span> 3D environment. Features a <span style='color: #8b5cf6;'>drifting astronaut</span>, a rotating planet, and dynamic lighting. <i>Perfect for creating an immersive, out-of-this-world hero section.</i>",
     },
     {
       name: "Drawing Lines",
