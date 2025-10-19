@@ -52,6 +52,7 @@ import { BlurTextShowcase, BlurTextTheme } from "@/components/vui/text/BlurText"
 import DrawingLinesShowcase from "@/components/vui/backgrounds/DrawingLines";
 import MagneticDock from "@/components/vui/MagneticDock";
 import BeforeAfterSliderShowcase from "@/components/vui/BeforeAfterSlider";
+import AIChatShowcase from "@/components/vui/ai/AIChatShowcase";
 
 export type ComponentEntry = {
   name: string;
@@ -109,6 +110,14 @@ export const componentMap: ComponentCategoryMap = {
       path: "components/vui/ai/MagicalChatInput.tsx",
       description:
         "🔮 <b>Magical Chat Input</b> - A magical chat input component with <span style='color: #8b5cf6;'>smooth animations</span>, <span style='color: #3b82f6;'>cursor effects</span>, and <span style='color: #10b981;'>micro-interactions</span>. <i>Perfect for chat applications and AI assistants.</i>",
+    },
+    {
+      name: "AI Chat",
+      component: AIChatShowcase,
+      route: "/ai-components/ai-chat",
+      path: "components/vui/ai/AIChat.tsx",
+      description:
+        "🤖 <b>Complete AI Chat Interface</b> - Ready-to-use chat component with <span style='color: #10b981;'>OpenAI integration</span>, <span style='color: #3b82f6;'>real-time messaging</span>, and <span style='color: #8b5cf6;'>beautiful animations</span>. <i>Just add your API key and start chatting!</i>",
     },
   ],
   Backgrounds: [

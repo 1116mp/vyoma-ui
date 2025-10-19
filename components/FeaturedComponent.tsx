@@ -40,6 +40,14 @@ const items: FeaturedItem[] = [
     route: "/components/wheel-picker",
     accent: "amber",
   },
+    {
+    name: "AI Chat",
+    description:
+      "Complete chat interface with OpenAI integration, real-time messaging & beautiful animations. Ready to use!",
+    icon: <MessageSquare className="w-8 h-8" />,
+    route: "/ai-components/ai-chat",
+    accent: "blue",
+  },
 ];
 
 // Accent styling helpers centralised for consistency
