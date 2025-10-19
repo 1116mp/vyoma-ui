@@ -52,6 +52,7 @@ import { BlurTextShowcase, BlurTextTheme } from "@/components/vui/text/BlurText"
 import DrawingLinesShowcase from "@/components/vui/backgrounds/DrawingLines";
 import MagneticDock from "@/components/vui/MagneticDock";
 import BeforeAfterSliderShowcase from "@/components/vui/BeforeAfterSlider";
+import CircuitFlow from "@/components/vui/backgrounds/CircuitFlow";
 
 export type ComponentEntry = {
   name: string;
@@ -112,6 +113,14 @@ export const componentMap: ComponentCategoryMap = {
     },
   ],
   Backgrounds: [
+    {
+      name: "Circuit Flow",
+      component: CircuitFlow,
+      route: "/backgrounds/circuit-flow",
+      path: "components/vui/backgrounds/CircuitFlow.tsx",
+      description:
+        "🔌 <b>Animated Circuit Background</b> - A neon circuit board effect with <span style='color: #8b5cf6;'>glowing paths</span>, <span style='color: #3b82f6;'>pulsing nodes</span>, and <span style='color: #10b981;'>themeable colors</span>. <i>Great for tech, AI, and developer-focused pages.</i>",
+    },
     {
       name: "Hexagonal",
       component: HexagonalShowcase,
