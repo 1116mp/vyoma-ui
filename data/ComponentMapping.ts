@@ -35,6 +35,7 @@ import {
 } from "@/components/vui/backgrounds/WavyTiles";
 import HexagonalShowcase from "@/components/vui/backgrounds/Hexagonal";
 import { ButtonShowcase, ButtonTheme } from "@/components/vui/Button";
+import ShinyParticleGalaxyShowcase from "@/components/vui/backgrounds/ShinyParticleGalaxy";
 import ToolTipShowcase, { ToolTipTheme } from "@/components/vui/ToolTip";
 import NavigationShowcase from "@/components/vui/Navigation";
 import { PillShowcase, PillTheme } from "@/components/vui/pillcomponent";
@@ -128,6 +129,15 @@ export const componentMap: ComponentCategoryMap = {
       description:
         "🌌 <b>3D Tunnel Animation</b> - Mesmerizing <span style='color: #8b5cf6;'>depth-based</span> background effect with <span style='color: #3b82f6;'>particle systems</span> and <span style='color: #10b981;'>smooth transitions</span>. <i>Creates an immersive visual experience for hero sections.</i>",
     },
+    {
+  name: "Shiny Particle Galaxy",
+  component: ShinyParticleGalaxyShowcase,
+  route: "/backgrounds/shiny-particle-galaxy",
+  path: "components/vui/backgrounds/ShinyParticleGalaxy.tsx",
+  description:
+    "🌌 <b>Shiny Particle Galaxy</b> - Fly through a mesmerizing galaxy of interactive particles with <span style='color: #8b5cf6;'>gradient colors</span> and <span style='color: #3b82f6;'>cursor-based parallax</span>. <i>Perfect for tech startups, SaaS, and AI products.</i>",
+},
+
     {
       name: "Drawing Lines",
       component: DrawingLinesShowcase,
