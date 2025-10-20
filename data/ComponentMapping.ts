@@ -29,6 +29,7 @@ import {
 import { BentoGridShowcase, BentoGridTheme } from "@/components/vui/BentoGrid";
 import CardShowcase, { CardTheme } from "@/components/vui/Card";
 import TunnelShowcase from "@/components/vui/backgrounds/Tunnel";
+import SpaceShowcase from "@/components/vui/backgrounds/Space";
 import {
   WavyTilesShowcase,
   WavyTilesTheme,
@@ -53,6 +54,8 @@ import { BlurTextShowcase, BlurTextTheme } from "@/components/vui/text/BlurText"
 import DrawingLinesShowcase from "@/components/vui/backgrounds/DrawingLines";
 import MagneticDock from "@/components/vui/MagneticDock";
 import BeforeAfterSliderShowcase from "@/components/vui/BeforeAfterSlider";
+import CircuitFlow from "@/components/vui/backgrounds/CircuitFlow";
+import AIChatShowcase from "@/components/vui/ai/AIChatShowcase";
 
 export type ComponentEntry = {
   name: string;
@@ -111,8 +114,24 @@ export const componentMap: ComponentCategoryMap = {
       description:
         "🔮 <b>Magical Chat Input</b> - A magical chat input component with <span style='color: #8b5cf6;'>smooth animations</span>, <span style='color: #3b82f6;'>cursor effects</span>, and <span style='color: #10b981;'>micro-interactions</span>. <i>Perfect for chat applications and AI assistants.</i>",
     },
+    {
+      name: "AI Chat",
+      component: AIChatShowcase,
+      route: "/ai-components/ai-chat",
+      path: "components/vui/ai/AIChat.tsx",
+      description:
+        "🤖 <b>Complete AI Chat Interface</b> - Ready-to-use chat component with <span style='color: #10b981;'>OpenAI integration</span>, <span style='color: #3b82f6;'>real-time messaging</span>, and <span style='color: #8b5cf6;'>beautiful animations</span>. <i>Just add your API key and start chatting!</i>",
+    },
   ],
   Backgrounds: [
+    {
+      name: "Circuit Flow",
+      component: CircuitFlow,
+      route: "/backgrounds/circuit-flow",
+      path: "components/vui/backgrounds/CircuitFlow.tsx",
+      description:
+        "🔌 <b>Animated Circuit Background</b> - A neon circuit board effect with <span style='color: #8b5cf6;'>glowing paths</span>, <span style='color: #3b82f6;'>pulsing nodes</span>, and <span style='color: #10b981;'>themeable colors</span>. <i>Great for tech, AI, and developer-focused pages.</i>",
+    },
     {
       name: "Hexagonal",
       component: HexagonalShowcase,
@@ -130,14 +149,13 @@ export const componentMap: ComponentCategoryMap = {
         "🌌 <b>3D Tunnel Animation</b> - Mesmerizing <span style='color: #8b5cf6;'>depth-based</span> background effect with <span style='color: #3b82f6;'>particle systems</span> and <span style='color: #10b981;'>smooth transitions</span>. <i>Creates an immersive visual experience for hero sections.</i>",
     },
     {
-  name: "Shiny Particle Galaxy",
-  component: ShinyParticleGalaxyShowcase,
-  route: "/backgrounds/shiny-particle-galaxy",
-  path: "components/vui/backgrounds/ShinyParticleGalaxy.tsx",
-  description:
-    "🌌 <b>Shiny Particle Galaxy</b> - Fly through a mesmerizing galaxy of interactive particles with <span style='color: #8b5cf6;'>gradient colors</span> and <span style='color: #3b82f6;'>cursor-based parallax</span>. <i>Perfect for tech startups, SaaS, and AI products.</i>",
-},
-
+      name: "Space",
+      component: SpaceShowcase,
+      route: "/backgrounds/space",
+      path: "components/vui/backgrounds/Space.tsx",
+      description:
+        "🧑‍🚀 <b>Interactive 3D Space Scene</b> - Embark on a cosmic journey with a <span style='color: #3b82f6;'>fully interactive</span> 3D environment. Features a <span style='color: #8b5cf6;'>drifting astronaut</span>, a rotating planet, and dynamic lighting. <i>Perfect for creating an immersive, out-of-this-world hero section.</i>",
+    },
     {
       name: "Drawing Lines",
       component: DrawingLinesShowcase,
