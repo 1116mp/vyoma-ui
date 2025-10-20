@@ -55,7 +55,7 @@ export default function ShinyParticleGalaxy() {
       scene.add(points);
     });
 
-    let mouseX = 0, mouseY = 0;
+    // We only need targetX and targetY for mouse movement
     let targetX = 0, targetY = 0;
     const windowHalfX = window.innerWidth / 2;
     const windowHalfY = window.innerHeight / 2;
