@@ -2,7 +2,7 @@
 
 import * as THREE from "three";
 import { useRef, useEffect } from "react";
-import { useIsMobile } from "@/hooks/use-mobile"; // Assumes the corrected hook is here
+import { useIsMobile } from "@/hooks/use-mobile"; // Assumes your hook exists
 
 export default function ShinyParticleGalaxy() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -17,7 +17,12 @@ export default function ShinyParticleGalaxy() {
     renderer.setPixelRatio(window.devicePixelRatio);
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
     camera.position.z = 50;
 
     // Create gradient particle layers
@@ -55,15 +60,16 @@ export default function ShinyParticleGalaxy() {
       scene.add(points);
     });
 
-    // We only need targetX and targetY for mouse movement
-    let targetX = 0, targetY = 0;
+    // Target positions based on mouse
+    let targetX = 0;
+    let targetY = 0;
     const windowHalfX = window.innerWidth / 2;
     const windowHalfY = window.innerHeight / 2;
 
-    function onMouseMove(e: MouseEvent) {
+    const onMouseMove = (e: MouseEvent) => {
       targetX = (e.clientX - windowHalfX) * 0.05;
       targetY = (e.clientY - windowHalfY) * 0.05;
-    }
+    };
 
     if (!isMobile) {
       window.addEventListener("mousemove", onMouseMove);
@@ -71,7 +77,7 @@ export default function ShinyParticleGalaxy() {
 
     let animationId: number;
 
-    function animate() {
+    const animate = () => {
       animationId = requestAnimationFrame(animate);
 
       particleGroups.forEach((group, i) => {
@@ -84,15 +90,15 @@ export default function ShinyParticleGalaxy() {
       camera.lookAt(scene.position);
 
       renderer.render(scene, camera);
-    }
+    };
 
     animate();
 
-    function handleResize() {
+    const handleResize = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-    }
+    };
 
     window.addEventListener("resize", handleResize);
 
@@ -113,10 +119,18 @@ export default function ShinyParticleGalaxy() {
     <div className="relative w-full h-screen overflow-hidden bg-black">
       <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className={`${isMobile ? "text-3xl" : "text-6xl md:text-8xl"} font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-[#FFEE93] via-[#94D82A] to-[#0B405B]`}>
+        <h1
+          className={`${
+            isMobile ? "text-3xl" : "text-6xl md:text-8xl"
+          } font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-[#FFEE93] via-[#94D82A] to-[#0B405B]`}
+        >
           GALAXY
         </h1>
-        <p className={`${isMobile ? "text-sm" : "text-lg md:text-xl"} mt-4 text-gray-300 max-w-2xl`}>
+        <p
+          className={`${
+            isMobile ? "text-sm" : "text-lg md:text-xl"
+          } mt-4 text-gray-300 max-w-2xl`}
+        >
           Fly through a mesmerizing galaxy of shining particles with this interactive 3D background.
         </p>
       </div>
