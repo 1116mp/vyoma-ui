@@ -65,7 +65,6 @@ export default function ShinyParticleGalaxy() {
     window.addEventListener("mousemove", onMouseMove);
 
     let animationId: number;
-
     const animate = () => {
       animationId = requestAnimationFrame(animate);
       particleGroups.forEach((group, i) => {
