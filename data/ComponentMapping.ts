@@ -184,14 +184,7 @@ export const componentMap: ComponentCategoryMap = {
         "✨ <b>Shiny Particle Galaxy</b> - Stunning galaxy animation with twinkling stars, motion depth, and smooth particle effects. Great for hero sections.",
     },
     // ✅ Your new background entry
-    {
-      name: "Shining Star",
-      component: ShiningStarShowcase,
-      route: "/backgrounds/shining-star",
-      path: "components/vui/backgrounds/ShiningStar.tsx",
-      description:
-        "🌟 <b>Shining Star Background</b> - A glowing star animation with radiant pulses, soft spark effects, and smooth gradients. Perfect for modern hero sections and premium portfolio pages.",
-    },
+
   ],
   Components: [
     {
